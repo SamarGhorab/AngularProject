@@ -1,0 +1,9 @@
+
+.navbar{
+background-color: rgba(30,41,82,0.1);
+}
+.auth a{
+    text-decoration: none;
+    margin: 0px 10px;
+    color: #fff;
+}

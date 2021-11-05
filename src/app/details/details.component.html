@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-md-3">
+        <div>
+            <img class="w-100" src="https://image.tmdb.org/t/p/original{{movieDetails.poster_path}}" alt="">
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div>
+           <h3>{{movieDetails.title}}</h3>
+           <button *ngFor="let type of movieDetails.genres" class="btn btn-info mx-2">{{type.name}}</button>
+           <h6 class="my-3">Vote: {{movieDetails.vote_average}}</h6>
+           <h6  class="my-3">Vote count: {{movieDetails.vote_count}}</h6>
+           <h6  class="my-3">Popularity: {{movieDetails.popularity}}</h6>
+           <h6  class="my-3">Release Date: {{movieDetails.release_date}}</h6>
+
+           <p class="text-muted">{{movieDetails.overview}}</p>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "pacman" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
+
+<h1>Trending Movies</h1>
+<div class="row">
+    <div class="col-md-2 my-2" *ngFor='let movie of homeMovies'>
+        <div>
+            <img  class="w-100"src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}" alt="">
+             <h6>{{movie.title}}</h6>
+             <button routerLink='/details/movie/{{movie.id}}'  class="btn btn-success">details</button>
+        </div>
+    </div>
+</div>
+
+<br>
+<h1>Trending Tvshows</h1>
+<div class="row">
+    <div class="col-md-2 my-2" *ngFor='let tv of homeTv'>
+        <div>
+            <img  class="w-100"src="https://image.tmdb.org/t/p/original/{{tv.poster_path}}" alt="">
+
+             <h6>{{tv.name}}</h6>
+             <button routerLink='/details/tv/{{tv.id}}'  class="btn btn-success">details</button>
+
+        </div>
+    </div>
+</div>
+<br>
+<h1>Trending people</h1>
+<div class="row">
+    <div class="col-md-2 my-2" *ngFor='let person of homePeople'>
+        <div>
+            <img  class="w-100"src="https://image.tmdb.org/t/p/original/{{person.profile_path}}" alt="">
+
+             <h6>{{person.name}}</h6>
+
+        </div>
+    </div>
+</div>
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li (click)='getTrendingItems(1)' class="page-item"><a class="page-link" >1</a></li>
+      <li (click)='getTrendingItems(2)' class="page-item"><a class="page-link">2</a></li>
+      <li  (click)='getTrendingItems(3)' class="page-item"><a class="page-link">3</a></li>
+    </ul>
+  </nav>
+
